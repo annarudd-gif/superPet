@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Font";
+    src: url("BasicallyAMonoMedium.ttf") format("truetype");
+}
+
 body {
     margin: 0;
 }
@@ -5,60 +10,54 @@ body {
 #main-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 170px auto 200px;
+    grid-template-rows: auto 1fr 100px;
 }
 
 header {
+    position: relative;
     grid-row: 1;
     grid-column: 1;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 #logo-container{
 display: flex;
-justify-content: center;
-align-items: center;
-grid-column: 1;
-grid-row: 1;
-height: 100%;
+height: auto;
 width: 100%;
 }
-
-
-
-#main-text-container{
-grid-column: 2;
-grid-row: 1;
-height: 100%;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-
 #logo{
-    width: 60%;
-    
+    width: 100%;
+    height: auto;
 }
-#main-text{
-   margin-left: 10px;
-   
-   
-    
-}
+
+
+
+
+
+
+
+
 #telephone{
+    position: sticky;
     display: flex;
     grid-column: 1/3;
     grid-row: 2;
     width: 100%;
     height: 100%;
     justify-content: space-evenly;
+}
+
+
+
+.tf{
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #telegram,#viber,#phone{
@@ -81,24 +80,76 @@ main {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-auto-rows: 200px;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-auto-rows: auto;
 
     gap:20px 2%;
 }
+.price{
+    color: green;
+}
+.inf{
+    font-size: 19px;
+}
 
 .foto {
-    grid-column: 1;
     place-self: center;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 
     background-color: black;
     border-radius: 20%;
+}
+.pet{
+    
+    height: 100%;
 }
 
 footer {
     width: 100%;
     height: 100%;
-    background-color: lightsalmon;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    background-color: rgba(0, 0, 0, 0.1);
 }
+
+
+#footText {
+    height: 100%;
+    width: 100%;
+    grid-row: 2;;
+    position: relative;
+}
+
+#footText p {
+    position: absolute;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    bottom: 0px;
+    font-size: 16px;
+}
+
+@media(max-width:1023px){
+    main{
+        grid-template-columns: 1fr 2fr;
+    }
+    #main-text{
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:599px){
+    #telephone{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    #main-text{
+        font-size: 16px;
+    }
+
+}
+
