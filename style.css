@@ -131,6 +131,9 @@ footer {
 }
 
 @media(max-width:1023px){
+    .inf{
+        font-size: 16px;
+    }
     .foto{
         height: 200px;
         width: 200px;
