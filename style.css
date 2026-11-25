@@ -115,20 +115,11 @@ footer {
 #footText {
     height: 100%;
     width: 100%;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:auto;
-    position: relative;
 }
 
 #footText p {
-    grid-row:1;
-    grid-column:1;
-    position: absolute;
-    margin-bottom: 3px;
-    margin-left: 10px;
-    bottom: 0px;
     font-size: 16px;
+    margin-bottom:5px;
 }
 
 @media(max-width:1023px){
